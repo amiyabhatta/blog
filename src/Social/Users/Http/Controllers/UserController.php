@@ -19,8 +19,9 @@ class UserController extends Controller
         return $this->usercontainer->getUsersss();
     } 
     
-    public function testUsersAnand(){
-        dd("test");
+
+    public function testUsers(){
+        dd("test1234");
     }
   
 }
