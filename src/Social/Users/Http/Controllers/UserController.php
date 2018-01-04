@@ -16,7 +16,7 @@ class UserController extends Controller
     }
      
     public function getUser(){
-        return $this->usercontainer->getUser();
+        return $this->usercontainer->getUsersss();
     } 
   
 }
