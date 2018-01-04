@@ -16,7 +16,6 @@ class UserController extends Controller
     }
      
     public function getUser(){
-        dd("fhfg");
         return $this->usercontainer->getUser();
     } 
   
