@@ -2,12 +2,12 @@
 
 namespace Social\Models;
 
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Cache;
 
-class User extends Authenticatable
-{
-    use Notifiable;
+class User extends Authenticatable {
+
+    protected $table = 'users';
 
     /**
      * The attributes that are mass assignable.
@@ -26,8 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    
-    public function getAllUser(){
-        return 'All Userssss';
+
+    public function getAllUser() {
+        
+        Cache::remember('users', 2, function() {
+            return $this->all();
+        });
+        $data = Cache::get('users');
+        return response()->json($data);
+        
+        //return $this->all();
     }
+
 }

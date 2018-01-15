@@ -26,10 +26,10 @@ class SocialServiceProvider extends ServiceProvider {
      */
     public function register() {
         
-        //$userModel = new User();
-        
-        \App::bind("Social\Contracts\UserContract", function(){
-            return new UserContainer();
+        $userModel = new User();
+       
+        \App::bind("Social\Services\Contracts\UserContract", function() use($userModel) {
+            return new UserContainer($userModel);
         });
     }
 
