@@ -7,5 +7,13 @@
  */
 
 Route::group(['prefix' => 'api/v1'], function () {
-   Route::get('users','Users\Http\Controllers\UserController@getUser');   
+   
+   //Regiseter
+   Route::post('users/register','Users\Http\Controllers\UserController@register'); 
+   
+   //Login
+   Route::post('users/login','Users\Http\Controllers\UserController@login'); 
+    
+   Route::get('users','Users\Http\Controllers\UserController@getUser')->middleware('jwt.auth');
+   
 });

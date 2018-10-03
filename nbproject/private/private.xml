@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/amiya.bhatta/Documents/projects/blog/src/Social/Configs/route.php</file>
+            <file>file:/Users/amiya.bhatta/Documents/projects/blog/src/Social/Models/User.php</file>
+            <file>file:/Users/amiya.bhatta/Documents/projects/blog/.env</file>
+            <file>file:/Users/amiya.bhatta/Documents/projects/blog/composer.json</file>
+        </group>
     </open-files>
 </project-private>
